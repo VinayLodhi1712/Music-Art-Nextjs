@@ -7,6 +7,7 @@ import { cn } from "@/utils/cn";
 import {
   IconBrandGoogle,
 } from "@tabler/icons-react";
+import Link from "next/link";
 
 export default function SignupFormDemo() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -18,23 +19,13 @@ export default function SignupFormDemo() {
     <BackgroundBeams className="absolute top-0 left-0 w-full h-full z-0" />
       <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-7 shadow-input bg-white dark:bg-black mt-8 z-10 border border-teal-500	" >
         <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200 text-center">
-          Welcome to Music-Art
+          Welcome Back!
         </h2>
-        <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300 text-center">
-          Sign in to Music-Art to get started
+        <p className="text-neutral-600 text-xl max-w-sm mt-2 dark:text-neutral-300 text-center">
+          Login to get started &rarr; 
         </p>
 
         <form className="my-8" onSubmit={handleSubmit}>
-          <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
-            <LabelInputContainer>
-              <Label htmlFor="firstname">First name</Label>
-              <Input id="firstname" placeholder="Vinay" type="text" />
-            </LabelInputContainer>
-            <LabelInputContainer>
-              <Label htmlFor="lastname">Last name</Label>
-              <Input id="lastname" placeholder="Lodhi" type="text" />
-            </LabelInputContainer>
-          </div>
           <LabelInputContainer className="mb-4">
             <Label htmlFor="email">Email Address</Label>
             <Input id="email" placeholder="projectmayhem@gmail.com" type="email" />
@@ -48,9 +39,15 @@ export default function SignupFormDemo() {
             className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
             type="submit"
           >
-            Sign up &rarr;
+           Login &rarr;
             <BottomGradient />
           </button>
+          <div className="flex justify-end p-2">
+  <Link href={"/forgot-password"} className="text-white text-center">
+    Forgot Password
+  </Link>
+</div>
+
 
           <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
 
